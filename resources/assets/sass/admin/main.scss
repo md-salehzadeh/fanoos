@@ -1,0 +1,52 @@
+.ltr {
+	direction: ltr;
+}
+
+.colorpicker-component {
+	position: relative;
+	margin: 20px 0;
+
+	.colorpicker-preview + div {
+		direction: ltr;
+		position: absolute;
+		z-index: 999;
+	}
+	
+	.colorpicker-preview {
+		// position: absolute;
+		width: 30px;
+		height: 30px;
+		border: 1px solid #eee;
+		border-radius: 3px;
+	}
+}
+
+.vc-sketch {
+	display: none;
+}
+
+.vc-sketch.show {
+	display: block;
+}
+
+html {
+	// overflow: hidden !important;
+
+	body {
+		// overflow: hidden !important;
+
+		#main {
+			overflow: auto !important;
+			width: 100%;
+			// height: calc(100vh - 88px);
+
+			#page-title {
+				margin-bottom: 30px;
+			}
+		}
+
+		.fr-box {
+			z-index: 1;
+		}
+	}
+}

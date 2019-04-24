@@ -1,0 +1,13 @@
+.v-toolbar {
+	padding-right: 0 !important;
+}
+
+.application--is-rtl .v-badge__badge {
+	right: -22px !important;
+    left: auto !important;
+}
+
+.v-divider--inset:not(.v-divider--vertical) {
+    margin-right: 72px;
+    margin-left: auto !important;
+}

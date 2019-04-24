@@ -1,0 +1,42 @@
+.ltr {
+  direction: ltr;
+}
+
+.colorpicker-component {
+  position: relative;
+  margin: 20px 0;
+}
+
+.colorpicker-component .colorpicker-preview + div {
+  direction: ltr;
+  position: absolute;
+  z-index: 999;
+}
+
+.colorpicker-component .colorpicker-preview {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+
+.vc-sketch {
+  display: none;
+}
+
+.vc-sketch.show {
+  display: block;
+}
+
+html body #main {
+  overflow: auto !important;
+  width: 100%;
+}
+
+html body #main #page-title {
+  margin-bottom: 30px;
+}
+
+html body .fr-box {
+  z-index: 1;
+}
