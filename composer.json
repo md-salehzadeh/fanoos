@@ -1,10 +1,16 @@
 {
-    "name": "laravel/laravel",
+    "name": "fanoos/fanoos",
     "type": "project",
-    "description": "The Laravel Framework.",
+	"description": "The CMS based on Laravel Framework.",
+	"version": "1.0.0",
     "keywords": [
-        "framework",
-        "laravel"
+        "fanoos",
+        "cms",
+        "laravel",
+        "modular",
+        "mulitilingual",
+        "vuejs",
+        "adminpanel"
     ],
     "license": "MIT",
     "require": {
