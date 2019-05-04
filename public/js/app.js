@@ -2364,7 +2364,9 @@ __webpack_require__.r(__webpack_exports__);
         headers: {
           'Content-Type': 'multipart/form-data'
         }
-      }).then(function (response) {});
+      }).then(function (response) {
+        alert('نصب شد');
+      });
     }
   }
 });
