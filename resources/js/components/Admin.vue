@@ -1,7 +1,7 @@
 <template>
 
 	<v-app>
-		<v-navigation-drawer clipped right app v-model="drawer" :mini-variant.sync="mini" hide-overlay stateless class="elevation-3">
+		<!-- <v-navigation-drawer clipped right app v-model="drawer" :mini-variant.sync="mini" hide-overlay stateless class="elevation-3">
 			<v-toolbar flat class="transparent">
 				<v-list class="pa-0">
 					<v-list-tile avatar>
@@ -67,6 +67,37 @@
 					</v-list-tile>
 				</template>
 			</v-list>
+		</v-navigation-drawer> -->
+
+		<v-navigation-drawer clipped right app v-model="drawer" :mini-variant.sync="mini" hide-overlay stateless class="elevation-3">
+			<v-list>
+				<div v-for="(menu_item, menu_item_key) in side_menu_links" :key="menu_item_key">
+					<div v-if="menu_item.children.length">
+						<v-list-group :prepend-icon="menu_item.icon">
+							<template v-slot:activator>
+								<v-list-tile>
+									<v-list-tile-title>{{ menu_item.title }}</v-list-tile-title>
+								</v-list-tile>
+							</template>
+
+							<v-list-tile v-for="(child, i) in menu_item.children" :key="i" @click="goTo(child.route)">
+								<v-list-tile-title v-text="child.title"></v-list-tile-title>
+								<v-list-tile-action>
+									<v-icon v-text="child.icon"></v-icon>
+								</v-list-tile-action>
+							</v-list-tile>
+						</v-list-group>
+					</div>
+					<div v-else>
+						<v-list-tile @click="goTo(menu_item.route)">
+							<v-list-tile-action>
+								<v-icon>{{ menu_item.icon }}</v-icon>
+							</v-list-tile-action>
+							<v-list-tile-title>{{ menu_item.title }}</v-list-tile-title>
+						</v-list-tile>
+					</div>
+				</div>
+			</v-list>
 		</v-navigation-drawer>
 
 
@@ -84,7 +115,7 @@
 							<template v-slot:badge>
 								<span>3</span>
 							</template>
-							<v-icon  color="lighten-1">
+							<v-icon color="lighten-1">
 								notifications
 							</v-icon>
 						</v-badge>
@@ -157,20 +188,71 @@
 				required: true
 			}
 		},
+		mounted() {
+			axios
+				.get('/api/admin/modules')
+				.then(response => {
+					console.log(response.data);
+				});
+		},
 		data() {
 			return {
-				drawer: true,
-				items: [{
-						text: 'داشبورد',
-						icon: 'dashboard',
-						route: 'home'
-					},
+				side_menu_links: [
 					{
-						text: 'تنظیمات',
+						title: 'داشبورد',
+						icon: 'dashboard',
+						route: 'home',
+						children: [],
+					},{
+						title: 'تنظیمات',
 						icon: 'settings',
-						route: 'settings'
+						route: 'settings',
+						children: [],
+					},{
+						title: 'ماژول ها',
+						icon: 'view_module',
+						children: [
+							{
+								title: 'مشاهده',
+								icon: 'people_outline',
+								route: 'modules',
+							},
+							{
+								title: 'افزودن',
+								icon: 'add',
+								route: 'modules/add',
+							},
+							{
+								title: 'تنظیمات',
+								icon: 'settings',
+								route: 'modules/settings',
+							},
+						],
+					},{
+						title: 'کاربران',
+						icon: 'account_circle',
+						children: [
+							{
+								title: 'مشاهده',
+								icon: 'people_outline',
+								route: 'users',
+							},
+							{
+								title: 'افزودن',
+								icon: 'add',
+								route: 'users/add',
+							},
+							{
+								title: 'تنظیمات',
+								icon: 'settings',
+								route: 'users/settings',
+							},
+						],
 					}
 				],
+
+
+				drawer: true,
 				mini: false,
 				right: null,
 				fav: true,
@@ -213,7 +295,7 @@
 				});
 			},
 			goTo(route) {
-				this.$router.push(route);
+				this.$router.push(`/admin/${route}`);
 			},
 			refresh_page() {
 				this.$router.go(0);

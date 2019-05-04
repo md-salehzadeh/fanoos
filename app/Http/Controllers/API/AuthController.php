@@ -269,7 +269,7 @@ class AuthController extends Controller
 		
 		$code = mt_rand(1000, 9999);
 
-		$sms_response = (new \SmsAdapter)
+		$sms_response = (new \Sms)
 			->setNumber($mobile)
 			->setPattern(1143, ['token' => $code])
 			->send();

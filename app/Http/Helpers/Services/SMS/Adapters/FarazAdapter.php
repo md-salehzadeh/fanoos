@@ -4,10 +4,9 @@ namespace App\Http\Helpers\Services\Sms\Adapters;
 
 class FarazAdapter
 {
-	// to be filled with actual informaton from this sms service provider
-	private $from = '';
-	private $username = '';
-	private $password = '';
+	private $from = '+98100020400';
+	private $username = 'meforpepopleteam';
+	private $password = 'zamenzamen';
 
 	private $numbers = [];
 	private $message = [];

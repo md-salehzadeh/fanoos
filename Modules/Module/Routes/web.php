@@ -16,3 +16,5 @@ Route::prefix('module')->group(function() {
 	
     Route::get('install', 'ModuleController@install');
 });
+
+Route::get('api/admin/modules', 'ModuleController@index');

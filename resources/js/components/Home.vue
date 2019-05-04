@@ -3,7 +3,7 @@
 		<div class="title font-weight-light" id="page-title"><v-icon medium color="blue darken-2">home</v-icon> داشبورد مدیریت</div>
 
 		<v-layout row wrap>
-			<v-flex v-for="i in 2" :key="`4${i}`" xs6>
+			<v-flex v-for="i in 1" :key="`4${i}`" xs12>
 				<v-card class="mx-auto text-xs-center" color="green" dark max-width="600">
 					<v-card-text>
 						<v-sheet color="rgba(0, 0, 0, .12)">

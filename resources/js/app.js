@@ -16,10 +16,22 @@ import Admin from './components/Admin'
 import Home from './components/Home'
 import Settings from './components/Settings'
 
+import ModuleIndex from './components/module/Index'
+import ModuleAdd from './components/module/Add'
+
 import 'vuetify/dist/vuetify.min.css'
 import Vuetify from 'vuetify'
 Vue.use(Vuetify, {
-	rtl: true
+	rtl: true,
+	theme: {
+		primary: '#2196f3',
+		secondary: '#03a9f4',
+		accent: '#009688',
+		error: '#f44336',
+		warning: '#ffeb3b',
+		info: '#00bcd4',
+		success: '#4caf50',
+	}
 })
 
 import $ from 'jquery'
@@ -129,6 +141,18 @@ const router = new VueRouter({
 			path: '/admin/settings',
 			name: 'settings',
 			component: Settings,
+			props: true
+		},
+		{
+			path: '/admin/modules/add',
+			name: 'modules_add',
+			component: ModuleAdd,
+			props: true
+		},
+		{
+			path: '/admin/modules',
+			name: 'modules_index',
+			component: ModuleIndex,
 			props: true
 		}
 	],

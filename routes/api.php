@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Setting;
+// use App\Setting;
 
-Setting::init();
+// Setting::init();
 
 /*
 /--------------------------------------------------------------------------

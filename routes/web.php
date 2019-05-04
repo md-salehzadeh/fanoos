@@ -20,6 +20,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin/{any}', 'AdminController@index')->where('any', '.*');
 
-Route::get('api/admin/settings', 'SettingController@index');
-
 Route::get('api/test', 'ApiController@test');

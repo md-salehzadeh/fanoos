@@ -3,6 +3,13 @@ const mix = require('laravel-mix');
 require('laravel-mix-tailwind');
 require('laravel-mix-purgecss');
 
+
+/* Allow multiple Laravel Mix applications*/
+require('laravel-mix-merge-manifest');
+mix.mergeManifest();
+/*----------------------------------------*/
+
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management

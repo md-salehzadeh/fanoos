@@ -32,8 +32,8 @@ return array(
 
 		'before' => function($theme)
 		{
-			$theme->setTitle('Title example');
-			$theme->setAuthor('Jonh Doe');
+			$theme->setTitle('Fanoos CMS');
+			$theme->setAuthor('Mohammad Salehzadeh');
 		},
 
 		'asset' => function($asset)

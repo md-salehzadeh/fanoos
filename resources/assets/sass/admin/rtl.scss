@@ -11,3 +11,23 @@
     margin-right: 72px;
     margin-left: auto !important;
 }
+
+.v-list__group__items--no-action .v-list__tile {
+	padding-left: 16px;
+    padding-right: 72px;
+}
+
+.v-list__group__header--sub-group div .v-list__tile {
+    padding-right: 0;
+}
+
+.v-list__group__header--sub-group .v-list__group__header__prepend-icon {
+    padding: 0 40px 0 0;
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+.v-input__prepend-outer {
+    margin-right: 0;
+    margin-left: 9px;
+}

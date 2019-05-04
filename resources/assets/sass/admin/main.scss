@@ -30,15 +30,11 @@
 }
 
 html {
-	// overflow: hidden !important;
-
 	body {
-		// overflow: hidden !important;
-
 		#main {
 			overflow: auto !important;
 			width: 100%;
-			// height: calc(100vh - 88px);
+			align-self: start;
 
 			#page-title {
 				margin-bottom: 30px;

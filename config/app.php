@@ -234,9 +234,11 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 		'Twig' => TwigBridge\Facade\Twig::class,
 		'_' => App\Http\Helpers\Helpers::class,
-		'SmsAdapter' => App\Http\Helpers\Services\Sms\SmsAdapter::class,
+		'Sms' => App\Http\Helpers\Services\Sms\SmsAdapter::class,
+		'Payment' => App\Http\Helpers\Services\Payment\PaymentAdapter::class,
 
 		'Theme' => Facuz\Theme\Facades\Theme::class,
+		'Hook' => TorMorten\Eventy\Facades\Events::class,
     ],
 
 ];

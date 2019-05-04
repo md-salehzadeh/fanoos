@@ -1,39 +1,56 @@
+<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+
+<p align="center">
+  <a href="https://laravel.com">
+    <img src="https://img.shields.io/badge/laravel-5.8-red.svg" alt="vue">
+  </a>
+  <a href="https://github.com/vuejs/vue">
+    <img src="https://img.shields.io/badge/vue-2.6.10-brightgreen.svg" alt="vue">
+  </a>
+  <a href="https://github.com/ElemeFE/element">
+    <img src="https://img.shields.io/badge/element--ui-2.7.2-brightgreen.svg" alt="element-ui">
+  </a>
+  <a href="https://github.com/tuandm/laravue/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="license">
+  </a>
+</p>
+
 # Fanoos
 Fanoos CMS
 
 
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-
+## Screenshot
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+  <img width="900" src="https://cdn.laravue.dev/screenshot.png">
 </p>
+
+
+## Getting started
 
 
 #### Build Setup
 
 ``` bash
-# install composer dependencies
+# Clone the project
+git clone https://github.com/hidden-shadow/fanoos.git
+
+# Install composer dependencies
 composer install
 
-# install npm dependencies
-npm install
-
-# general database migration
+# Migration and DB seeder (after changing your DB settings in .env)
 php artisan migrate --seed
 
-# serve at localhost:8000
+# Serve at localhost:8000
 php artisan serve
 
-# build for development
-npm run dev
+# Install dependency
+npm install
 
-# build for production
-npm run build
+# Develop
+npm run dev # or npm run watch
 
-
+# Build on production
+npm run production
 ```
 
 

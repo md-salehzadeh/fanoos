@@ -1,0 +1,14 @@
+{
+    "name": "Feed",
+    "alias": "feed",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Feed\\Providers\\FeedServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
