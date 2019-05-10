@@ -1,0 +1,90 @@
+body {
+	direction: rtl;
+}
+
+.content {
+    right: 300px;
+    left: 0;
+    transition: right .25s ease;
+}
+
+.sidebar {
+    right: 0;
+	left: auto;
+	border-right: 0;
+	border-left: 1px solid rgba(0,0,0,.07);
+}
+
+.markdown-section h1 {
+    text-align: right;
+	direction: rtl;
+}
+
+.markdown-section blockquote {
+	direction: rtl;
+	text-align: right;
+	border-left: 0;
+	border-right: 4px solid var(--theme-color,#42b983);
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+.markdown-section p.tip {
+	border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    border-left: 0;
+    border-right: 4px solid #f66;
+    padding: 12px 30px 12px 24px;
+}
+
+.markdown-section p.tip:before {
+    right: -12px;
+    left: auto;
+}
+
+.markdown-section ol, .markdown-section ul {
+    padding-left: 0;
+    padding-right: 1.5rem;
+}
+
+li input[type=checkbox] {
+    margin: 0 0 .25em .2em;
+    vertical-align: middle;
+}
+
+.sidebar ul {
+    margin: 0 15px 0 0;
+    padding: 0;
+}
+
+.sidebar ul li.active>a {
+	border-right: 0;
+    border-left: 2px solid;
+}
+
+.app-sub-sidebar li:before {
+    padding-right: 0;
+    padding-left: 4px;
+    float: right;
+}
+
+.sidebar-toggle {
+    right: 0;
+    left: auto;
+}
+
+body.close .sidebar {
+    transform: translateX(300px);
+}
+
+body.close .content {
+    right: 0;
+    left: 0;
+}
+
+.markdown-section pre {
+    direction: ltr;
+    text-align: left;
+}

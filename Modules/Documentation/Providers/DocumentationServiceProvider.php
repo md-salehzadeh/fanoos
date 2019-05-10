@@ -5,6 +5,8 @@ namespace Modules\Documentation\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 
+use Illuminate\Routing\Router;
+
 class DocumentationServiceProvider extends ServiceProvider
 {
     /**
@@ -12,13 +14,13 @@ class DocumentationServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Router $router)
     {
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
         $this->registerFactories();
-        $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+		$this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
     }
 
     /**
